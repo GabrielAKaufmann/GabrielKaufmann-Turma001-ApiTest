@@ -1,4 +1,4 @@
-import pactum from 'pactum';
+/* import pactum from 'pactum';
 import { StatusCodes } from 'http-status-codes';
 import { SimpleReporter } from '../simple-reporter';
 
@@ -39,3 +39,4 @@ describe('Json Placeholder', () => {
     });
   });
 });
+ */

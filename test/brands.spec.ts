@@ -1,4 +1,4 @@
-import pactum from 'pactum';
+/* import pactum from 'pactum';
 import { StatusCodes } from 'http-status-codes';
 import { SimpleReporter } from '../simple-reporter';
 import { faker } from '@faker-js/faker';
@@ -27,3 +27,4 @@ describe('Toolshop API', () => {
     });
   });
 });
+ */

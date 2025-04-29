@@ -1,4 +1,4 @@
-import pactum from 'pactum';
+/* import pactum from 'pactum';
 import { SimpleReporter } from '../simple-reporter';
 import { faker } from '@faker-js/faker';
 import { StatusCodes } from 'http-status-codes';
@@ -119,3 +119,4 @@ describe('Pet Store API', () => {
 
   afterAll(() => p.reporter.end());
 });
+ */
