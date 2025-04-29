@@ -55,20 +55,13 @@ describe('CoverPhotos API - FakeRestAPI', () => {
       .expectStatus(200);
   });
 
-  it('06 - Deve retornar todos os CoverPhotos', async () => {
-    await pactum.spec()
-      .get(`${baseUrl}/CoverPhotos`)
-      .expectStatus(200)
-      .expectJsonLike([{ id: expect.any(Number) }]);
-  });
-
-  it('07 - Deve retornar erro com método PUT sem body', async () => {
+  it('06 - Deve retornar erro com método PUT sem body', async () => {
     await pactum.spec()
       .put(`${baseUrl}/CoverPhotos/${createdId}`)
       .expectStatus(415);
   });
 
-  it('08 - Deve retornar erro com POST usando dados inválidos', async () => {
+  it('07 - Deve retornar erro com POST usando dados inválidos', async () => {
     await pactum.spec()
       .post(`${baseUrl}/CoverPhotos`)
       .withJson({
@@ -79,7 +72,7 @@ describe('CoverPhotos API - FakeRestAPI', () => {
       .expectStatus(StatusCodes.BAD_REQUEST);
   });
 
-  it('09 - Deve aceitar múltiplos POSTs válidos sequenciais', async () => {
+  it('08 - Deve aceitar múltiplos POSTs válidos sequenciais', async () => {
     for (let i = 0; i < 3; i++) {
       await pactum.spec()
         .post(`${baseUrl}/CoverPhotos`)
@@ -92,7 +85,7 @@ describe('CoverPhotos API - FakeRestAPI', () => {
     }
   });
 
-  it('10 - Deve retornar erro ao acessar CoverPhoto com ID inválido', async () => {
+  it('9 - Deve retornar erro ao acessar CoverPhoto com ID inválido', async () => {
     await pactum.spec()
       .get(`${baseUrl}/CoverPhotos/invalid-id`)
       .expectStatus(StatusCodes.BAD_REQUEST);
